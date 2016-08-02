@@ -29,45 +29,46 @@ orc.agi = 12;
 orc.life = true;
 orc.weapon = '釘頭錘';
 
-// life
-var life = function(mudA){
-    if (mudA.life == true){
-    mudA.hp = mudA.hp - 5 ;
-    document.write(mudA.name+"還活著"+"但牠遭受了攻擊！HP剩下"+mudA.hp+"點!<br>");
-    return mudA.hp;
+
+// 調整值判斷
+var bonus = function(x){
+x = (x/2)-5
+return Math.floor(x)
+};
+
+//dice，骰子語法
+var dice = function (max) {
+min = 1;
+return Math.floor(Math.random()*(max-min+1)+min);
+}
+
+// life 判斷生物是否存活，回傳 life 的布林值
+var life = function(mud){
+    if (mud.hp <= 0){
+    mud.life = false ;
+    }else{
+        mud.life = true;
     };
+    return mud.life
 };
 
-life(orc)
-
-// D20 調整值判斷
-
-var d20Bonus = function(num){
-if (num >= 10){
-  // 大於10，超過20的調整值視為0
-  switch(x = num - 10){
-    case 0:x= 0;break;
-    case 1:x= 0;break;
-    case 2:x= 1;break;
-    case 3:x= 1;break;
-    case 4:x= 2;break;
-    case 5:x= 2;break;
-    case 6:x= 3;break;
-    case 7:x= 3;break;
-    case 8:x= 4;break;
-    case 9:x= 4;break;
-    case 10:x= 5;break;
-    default:x = 0;break;
+//先攻權
+var atkFirst = function(mudA,mudB){
+  x = dice(20)+bonus(mudA.agi)
+  document.write(mudA.name+"先攻丟出了"+x+"<br>");
+  y = dice(20)+bonus(mudB.agi)
+  document.write(mudB.name+"先攻丟出了"+y+"<br>");
+  if (x == y){  
+     document.write("唉呀，雙方一起動了！<br>");
+     if (dice(2)>1){first = mudA}else{first=mudB};
+     document.write(first.name+"驚險的搶到先機！<br>");
+   } else if (x>y){
+     first = mudA;
+     document.write(first.name+"發出一聲怒吼！<br>");
+   } else {
+     first = mudB;
+     document.write(first.name+"猛力一撲！<br>");
   };
-}else {
-  //小於10的調整值視為零
-  document.write("小於10<br>");
-    x = 0;
-};  
-// 輸出d20調整值
-return x
+  document.write(first.name+"搶到進攻先機！<br><br>");
+  return first;
 };
-
-document.write("你的d20調整值是："+d20Bonus(10)+"<br>");
-
-
