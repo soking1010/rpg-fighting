@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh_TW">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/favicon.ico"/>
+    <!-- Bootstrap 的行動裝置支援宣告 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入 CSS 與 jQuery -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/storyBoard.js"></script>
+    
+    <title>故事版</title>
+</head>
+  <body>
+  <!-- 第一段 -->
+   <div class="container" id="first">
+  <div class="row">
+    <h1 class="row col-xl-4 text-center title">獵人酒館：門口</h1>
+    <br>
+    <!-- 取名場景開始 -->
+    <div class="row col-xl-4 text-center playername">
+      <p id="playerName">
+      你好，陌生人，來到獵人酒館，你不能用真名，取個綽號吧？
+      </p>
+    </div>
+
+    <div class="row col-xl-4 text-center inputname">
+    <form>
+    <input type="text" class="form-control col-xl-4" placeholder="取個帥氣的獵人綽號吧！" id="inputName">
+    </form> 
+    <br>
+    <!-- <input type="button" class="btn btn-default create" value="確認" id="create"> -->
+    <button type="button" class="btn btn-default create"id = "create">
+      <span class="glyphicon glyphicon-user" aria-hidden="true" ></span>確認</button>
+    </div>
+    
+    <!-- 隱藏的按鈕 -->
+    <div class="row">
+    <div class="row col-xl-4 text-center">
+      <input type="button" class="btn btn-default" value="重新命名" id="reName">
+      <button type="button" class="btn btn-default gotoDice" id = "gotoDice">
+      <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>繼續</button>
+    </div>
+    </div><!-- 取名字場景到此結束 -->
+  </div>
+  </div>
+
+
+  <!-- 第二段 -->
+  <div class="container" id="second">
+	<div class="row">
+		<h1 class="text-center title">獵人酒館：大廳</h1>
+
+    <div class="ontheBoard">
+    <div class="selectOption blackBorder">
+      <p class="player"><!-- 玩家資料 -->
+        <span id="playerName">玩家名稱</span>
+        <span class="hp">HP：</span>
+        <span id="playerHp">44</span>
+      </p><!-- 玩家資料結束 -->
+      
+      <button type="button" class="btn btn-default" id="btnleft">攻擊</button>
+      
+      <button type="button" class="btn btn-default" id="btnright">放棄</button>
+      
+    </div>
+    <div class="mud blackBorder">
+      <h4 class="mudName" id="mudName">我是怪物的名字</h4>
+      <p>HP：<span id="mudHp">1234</span></p>
+      <p>狀態：<span>狂暴中</span></p>
+    </div>
+    </div>
+    <!-- 劇本區 -->
+    <div class="readBoard blackBorder">
+       <p id="outputBoard"><!-- <span>有增加 flex屬性，會換行 -->
+       <!-- <span class="output">這是範例文字</span> -->
+       </p>
+    <div class="triangle"></div><!-- 三角形 -->
+    </div>
+
+  </div>
+  </div><!-- 第二段結束 -->
+
+  </body>
+</html>

@@ -1,0 +1,131 @@
+body{
+	background: #283048;
+/*	background: #283048;
+    background: -webkit-linear-gradient(right, #283048, #859398);
+    background: -o-linear-gradient(right, #283048, #859398);
+    background: linear-gradient(to left, #283048, #859398);  
+    */
+}
+
+h1.title{
+	color: #fff;
+	font-size: 48px;
+    margin-top: 70px;
+}
+
+.inputname{
+	width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.create{
+    width: 87px;
+}
+
+#inputplayerName{
+	color: #fff;
+
+}
+
+.keepRed{
+	color: red;
+}
+
+.readBoard{
+	padding-top: 20px;
+	padding-bottom: 40px;
+	margin-top: 40px;
+	width: 700px;
+	height: 200px;
+	/*margin-top: 50px;*/
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+p {
+	margin-left: 20px;
+	color: #fff;
+}
+
+p.player{
+	margin-left: 15px;
+    margin-bottom: 24px;
+}
+
+.blackBorder{
+	background-color: #0b0a07;
+	border: 2px solid;
+	border-color: #fff;
+}
+
+.blackBorder .btn{
+	margin-bottom: 10px;
+}
+
+.triangle{
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 20px 12.5px 0 12.5px;
+	border-color: #fff transparent transparent transparent;
+	position: absolute;
+	right: 20px;
+	bottom: 15px;
+}
+
+.ontheBoard{
+	padding-top: 20px;
+	padding-bottom: 40px;
+	margin-top: 40px;
+	width: 700px;
+	height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.selectOption{
+	display: inline-block;
+	padding-top: 20px;
+	padding-left: 20px;
+	width: 200px;
+	height: 120px;
+}
+
+.selectOption .btn{
+	width: 74px;
+    height: 35px;
+}
+
+.selectOption .unuse{
+	background: #1C1B1B;
+	border-color: #363535;
+}
+
+.mud{
+	display: inline-block;
+	padding-top: 6px;
+	padding-left: 20px;
+	width: 325px;
+	height: 120px;
+    margin-left: 50px;
+}
+
+.mudName{
+	color: red;
+	margin-left: 20px;
+}
+
+.hp{
+	padding-left: 15px;
+}
+
+span.output{
+	display: flex;
+}
+
+span.pwhite{
+	display: flex;
+	font: #fff;
+}
